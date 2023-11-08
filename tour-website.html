@@ -39,6 +39,27 @@
             <li>Компаниям друзей.</li>
             <li>Семьям с детьми старше 12 лет.</li>
         </ul>
+        <table width="500">
+            <tr>
+                <th width="200">Тариф</th>
+                <th width="300">Группа</th>
+            </tr>    
+            <tr>
+                <td width="200">Эконом</td>
+                <td width="300">От 15 человек</td>
+            </tr>
+            <tr>
+                <td width="200">Комфорт</td>
+                <td width="300">От 7 человек</td>
+            </tr>
+        </table>
+        <form>
+            <input type="checkbox" name="servises" value="transfer">
+            <label>Трансфер до местаначала экскурсии</label>
+            <br>
+            <input type="checkbox" name="servises" value="disablet_transfer">
+            <label>Трансфер для малоподвижных групп населения</label>
+        </form>
         <figure> <img src="images/5.png"
             alt="happy couple from St. Petersburg"
             width="526"
@@ -66,8 +87,16 @@
         </figure>
         <blockquote>Я просто влюбилась в Санкт-Петербург благодаря этой экскурсии! Суперский гид рассказал удивительные истории о городе и его жителях. Отдельно отмечу маршрут. 
         Не первый раз в Питере, но эти локации увидела впервые. Класс!
-        </blockquote> 
-        <figure>
+        </blockquote>
+        <form>
+            <input type="text" placeholder="Имя"><br>
+            <input type="text" placeholder="Фамилия"><br>
+            <button type="submit">Отправить</button>
+        </form>
+        <select name="tarif" id="tarif">
+            <option value="economy">Эконом</option>
+            <option value="comfort">Комфорт</option>
+        </select>
         <a href="https://t.me/ArtArtisan">Свяжитесь с автором экскурсии</a>    
     </body>
 </html>
