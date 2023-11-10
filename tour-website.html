@@ -39,27 +39,106 @@
             <li>Компаниям друзей.</li>
             <li>Семьям с детьми старше 12 лет.</li>
         </ul>
+    <div class="container-tarif" id="price">
+        <h2 class="sub-heading">Какие есть тарифы?</h2>
+        <p class="text-tarif">Мы знаем, что каждое путешествие уникально. Поэтому разработали несколько тарифов, чтобы вы могли выбрать самый комфортный для себя. 
+           Независимо от выбранного тарифа, вас ждет незабываемое путешествие.</p>
+
         <table width="500">
             <tr>
                 <th width="200">Тариф</th>
                 <th width="300">Группа</th>
+                <th width="300">Стоимость</th>
+                <th width="300">Программа</th>
+
             </tr>    
             <tr>
-                <td width="200">Эконом</td>
-                <td width="300">От 15 человек</td>
+                <td>Эконом</td>
+                <td>От 15 человек</td>
+                <td>1500 руб</td>
+                <td>Пешая прогулка, Погрулка по крышам</td>
             </tr>
             <tr>
-                <td width="200">Комфорт</td>
-                <td width="300">От 7 человек</td>
+                <td>Комфорт</td>
+                <td>От 7 человек</td>
+                <td>2500 руб</td>
+                <td>Пешая прогулка, Экскурсия по рекам и каналам, Погрулка по крышам</td>
+            </tr>
+            <tr>
+                <td>Премиум</td>
+                <td>От 4 до 6 человек</td>
+                <td>4200 руб</td>
+                <td>Экскурсия по рекам и каналам, Погрулка по крышам, Экскурсия в Петергоф</td>
+            </tr>
+            <tr>
+                <td>Люкс</td>
+                <td>1-2 человека</td>
+                <td>6000 руб</td>
+                <td>Эксклюзивные маршруты под ключ, Пешая прогулка, Экскурсия по рекам и каналам, Погрулка по крышам, Экскурсия в Петергоф</td>
             </tr>
         </table>
-        <form>
-            <input type="checkbox" name="servises" value="transfer">
-            <label>Трансфер до местаначала экскурсии</label>
-            <br>
-            <input type="checkbox" name="servises" value="disablet_transfer">
-            <label>Трансфер для малоподвижных групп населения</label>
+                <p>Мы предлагаем различные варианты оплаты. Менеджер поможет подобрать оптимальный вариант.</p>
+    </div>
+    <div class="dop">
+        <h2>Дополнительные услуги</h2>
+        <form class="dop-form">
+            <ul>
+                <li>
+                    <input type="checkbox" name="services" value="transfer" data-price="100">
+                    <label>Трансфер до местаначала экскурсии</label> 
+                </li>
+                <li>
+                    <input type="checkbox" name="services" value="disablet_transfer" data-price="100">
+                    <label>Трансфер для малоподвижных групп населения</label>
+                </li> 
+                <li>
+                    <input type="checkbox" name="services" value="breakfast" data-price="100">
+                    <label>Завтрак</label>
+                </li>   
+                <li>
+                    <input type="checkbox" name="services" value="lunch" data-price="100">
+                    <lable>Обед</lable>
+                </li>
+                <li>
+                    <input type="checkbox" name="services" value="dinner" data-price="100">
+                    <lable>Ужин</lable>
+                </li>
+                <li>
+                    <input type="checkbox" name="services" value="translator" data-price="100">
+                    <label>Переводчик с русского на английский</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="services" value="guide" data-price="100">
+                    <Label>Экскурсовод для детей</Label>
+                </li>
+                <li>
+                    <input type="checkbox" name="services" value="sign language interpreter" data-price="100">
+                    <label>Сурдопереводчик</label>
+                </li>
+            </ul>
+            <p2 id="total-price">0 рублей</p2>
         </form>
+            <script>
+                const checkboxes = document.querySelectorAll('input[name="services"]');
+                const totalPriceElement = document.getElementById('total-price');
+            
+                checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', () => {
+                    let totalPrice = 0;
+                    checkboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        totalPrice += parseInt(checkbox.getAttribute('data-price'));
+                    }
+                    });
+                    totalPriceElement.textContent = `Сумма: ${totalPrice} рублей`;
+                });
+                });
+            </script>
+        
+    </div> 
+   
+    <h2>Отзывы участников</h2>
+       
         <figure> <img src="images/5.png"
             alt="happy couple from St. Petersburg"
             width="526"
@@ -67,7 +146,7 @@
             <figcaption>Аня и Сережа, Пермь</figcaption>
         </figure>
         <blockquote>Спасибо за незабываемую экскурсию!
-            Увозим с собой нереальные фотографии! Организаторам огромное спасибо, что даже в дождь путешествие было комфортным.
+            Увозим c собой нереальные фотографии! Организаторам огромное спасибо, что даже в дождь путешествие было комфортным.
         </blockquote>
         <figure>
             <img src="images/17.png" 
