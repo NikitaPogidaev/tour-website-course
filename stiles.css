@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "open sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/OpenSans-Regular.woff2) format(woff2),
+    url(/fonts/OpenSans-Regular.woff) format(woff);
+}
+
+@font-face {
+    font-family: "open sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/OpenSans-Bold.woff) format(woff),
+    url(/fonts/OpenSans-Bold.woff2) format(woff2);
+}
+
+.page {
+    width: 100%;
+}
+
+body {
+    min-height: 100%;
+    font-family: "open sans";
+    font-size: 20px;
+    color: #000;
+}
+
+.navbar-conteiner {
+    width: 1200px;
+}
+
+.intro-section {
+    min-height: 610px;
+    background-image: url(/images/intro.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    box-sizing: border-box;
+ }
+
+ .intro-title {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.container-main {
+    background-image: linear-gradient(90deg, #fff 50%, #242424 50%);
+}
+
+.page-section {
+    position: relative;
+}
+
+.dop-section {
+    content: "";
+    /* position: absolute; */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 9999px;
+}
+
+.program-subtitle {
+    font-size: 24px;
+ }
+
+ .program-img-container {
+    width: 100%;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+ }
+
+ .program-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.auditory-img-container {
+    width: 160px;
+    overflow: hidden;
+    
+ }
+
+ .auditory-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.price-title, .dop-title, .auditory-title, .program-title, .reviewes-title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.prices-table {
+    width: 100%;
+    border-collapse: collapse;
+ }
+
+ .prices-table th {
+    font-weight: 700;
+    color: #fff;
+    text-align: left;
+ }
+
+ .prices-table td {
+    font-size: 16px;
+ }
+
+ .prices-table th:first-child,
+ .prices-table td:first-child {
+    border-radius: 15px 0 0 15px;
+ }
+
+ .prices-table th:last-child,
+ .prices-table td:last-child {
+    border-radius: 0 15px 15px 0;
+ }
+
+ .price-camption {
+    font-size: 14px;
+    color: #9d9d9d;
+}
+
+.dop {
+    position: relative;
+    z-index: 1;
+ }
+
+ .dop-list {
+    list-style-type: none;
+ }
+
+ .dop label {
+    font-size: 16px;
+ }
+
+ #total-price {
+    border-radius: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.review {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+ }
+
+ .review-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+ }
+
+ .review-text {
+    font-size: 16px;
+}
+
+.contact-conect {
+    border-radius: 20px;
+}
+
+.card-image-link {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+ }
+
+ .card-image-link:hover {
+    opacity: 0.5;
+ }
+
+ .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+ .card-image-title a {
+    text-decoration: none;
+ }
+
+ .card-list {
+    list-style-type: none;
+}
+
+.autor {
+    border-radius: 15px;
+    position: relative;
+    justify-content: space-between;
+    /* font-size: 40px; */
+    font-weight: 700;
+    /* color: #fff; */
+    text-decoration: none;
+ }
+
+ .autor::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    background-image: url(/images/telegram.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+ }
+
+ .autor:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
