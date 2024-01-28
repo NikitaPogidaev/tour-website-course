@@ -103,7 +103,7 @@
 .container-main {
     
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 1200px;
     margin: 0 auto;
     padding: 0 50px;
@@ -168,21 +168,27 @@
     overflow: hidden; 
  }
 
+ .auditory-content {
+   position: relative;
+   /* z-index: 1; */
+ } 
+
  .auditory {
    position: relative;
    padding: 40px 80px 40px 0;
 }
 
-.auditory::before {
+.page-section::before {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
+    bottom: 0; 
     width: 9999px;
     background-color: #f2f2f2;
+    z-index: 0;
+    /* height:100%; */
    
-  
  }
 
  .auditory-top {
@@ -221,21 +227,26 @@
     margin-top: 30px;
     border-collapse: collapse;
  }
+
  .price-text {
     margin: 0;
  }
+
  .price-text p:not(:last-child) {
     margin-bottom: 10px;
  }
  .prices-table th {
     padding: 20px;
     font-weight: 700;
+    background-color: #242424;
     color: #fff;
     text-align: left;
  }
- .prices-table:nth-child(odd) {
+
+ .prices-table tr:nth-child(odd) td {
    background-color: #f2f2f2f2;
  }
+
  .prices-table td {
     padding: 20px;
     font-size: 16px;
@@ -251,6 +262,11 @@
     border-radius: 0 15px 15px 0;
  }
 
+ .container-tarif {
+   position: relative;
+   padding: 40px 80px 40px 0;
+ }
+
  .price-camption {
     margin-top: 10px;
     font-size: 14px;
@@ -260,17 +276,34 @@
 .dop {
     position: relative;
     z-index: 1;
+    padding: 40px 80px 40px 0;
  }
+
+ .dop-box {
+   display: grid;
+   grid-template-columns: 1fr 250px;
+   gap: 40px;
+   margin-top: 30px;
+ }
+
  .dop-list {
     margin: 0;
     padding: 0;
     list-style-type: none;
  }
+
  .dop label {
     font-size: 16px;
  }
+
+ .dop-right {
+   display: flex;
+   flex-direction: column;
+ }
+
  #total-price {
     margin-top: auto;
+    margin-bottom: 0;
     padding: 20px;
     border-radius: 15px;
     background-color: #242424;
@@ -279,24 +312,18 @@
     font-weight: 700;
     white-space: nowrap;
  }
+
  .dop-text p {
     margin: 0;
  }
+
  .dop-text p:not(:last-child) {
     margin-bottom: 10px;
- }
- .dop-section {
-    content: "";
-    /* position: absolute; */
-    top: 0;
-    right: 0;
-    bottom: 0;
-    /* width: 9999px; */
 }
 
+
+
 .review {
-    width: 100%;
-    height: 100%;
     overflow: hidden;
     display: flex;
     grid-template-columns: 150px 1fr;
@@ -305,22 +332,22 @@
     border-radius: 20px;
     background-color: #f8f8f8;
  }
- .reviewes-title {
-   display: grid; 
-   grid-template-columns: 150px 1fr; 
-   gap: 40px; 
-   padding: 20px 80px 20px 40px; 
-   border-radius: 20px; 
+
+ .review-box {
+   padding: 40px 80px 40px 0;
  }
+
  .review:not(:last-child) {
     margin-bottom: 20px;
  }
+
  .review-img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
  }
+
  .review-text {
     font-size: 16px;
     
@@ -328,15 +355,22 @@
  .review-text p {
     margin: 0;
  }
+
  .review-text p:not(:last-child) {
     margin-bottom: 10px;
 }
 
 .contact-conect {
-   padding: 20px 280px 20px 40px;
+    padding: 20px 280px 20px 40px;
     border-radius: 20px;
     background-color: #f8f8f8;
  }
+
+ .contact-box {
+   
+   padding: 40px 80px 40px 0px;
+ }
+
  .contact-text {
     font-size: 16px; 
  }
@@ -346,14 +380,24 @@
  .contact-text p:not(:last-child) {
     margin-bottom: 10px;
  }
- .contact-form-bottom {
+ .contact-form-botton {
     margin-top: 30px;
+    display: flex;
+  justify-content: space-between;
+  align-items: center; 
+    
+}
+
+.button-right {
+   align-items: end;
+   justify-content: space-between;
 }
 
 .sidebar {
    padding: 40px 0 40px 20px;
    background-color: #242424;
    color: #fff;
+   z-index: 1;
 }
 .sidebar-title {
    margin: 0;
@@ -430,6 +474,8 @@
     position: absolute;
     top: 30px;
     right: 40px;
+    width: 40px;
+    height: 40px;
     background-image: url(/images/telegram.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -440,7 +486,9 @@
     color: rgba(255, 255, 255, 0.5);
 }
 
-
+.autor:hover::after {
+   opacity: 0.5;
+}
 
 .footer {
     padding: 30px 0;
@@ -449,4 +497,5 @@
 }
 .footer p {
     padding-right: 390px;
+    text-align: center;
 }
