@@ -62,7 +62,7 @@
 
 .intro-section {
     min-height: 610px;
-    background-image: url(/images/intro.png);
+    background-image: url(images/intro.png);
     background-size: cover;
     background-position: center;
     background-color: #242424;
@@ -476,7 +476,7 @@
     right: 40px;
     width: 40px;
     height: 40px;
-    background-image: url(/images/telegram.svg);
+    background-image: url(images/telegram.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
